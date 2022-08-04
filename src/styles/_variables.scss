@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+//fonts
+$font: 'Open Sans';
+$font-light: 300;
+$font-regular: 400;
+$font-title: 600;
+
+//colors
+$normal: rgb(30, 30, 30);
+$light: rgb(30, 30, 30);
+$background: #f2f2f2;
+
+$radius: 5px;
+$gap: 20px;
+
+@mixin button {
+    background-color: $background;
+    padding: 5px;
+    border-radius: $radius;
+    border: 2px solid lightgray;
+    cursor: pointer;
+}

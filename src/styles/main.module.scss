@@ -1,0 +1,46 @@
+@import '_variables';
+
+.main {
+    width: 60vw;
+    max-height: 80vh;
+    min-height:40vh;
+    height: auto; 
+    border-radius: $radius;
+    box-shadow: rgb(175, 175, 175) 0px 3px 7px;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    &>button {
+        @include button;
+        text-transform: uppercase;
+    }
+
+}
+
+
+aside {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: $gap;
+}
+
+img {
+    width: 300px;
+    max-width: calc(60vw - 20px);
+    height: 100%;
+    border-radius: $radius;
+}

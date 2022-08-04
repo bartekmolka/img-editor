@@ -1,0 +1,21 @@
+@import "_variables";
+
+.edit {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: column;
+
+    &>div {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    button {
+        @include button;
+    }
+}
+
