@@ -3,6 +3,7 @@ import React from "react";
 
 type FilterContext = {
     filter: string;
+    setFilter: () => void;
 }
 
 const FilterContext = createContext({} as FilterContext);
