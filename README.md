@@ -1,6 +1,9 @@
 # Simple image editor app
 Made by using React & TypeScript on ViteJS
 
+Preview: 
+![image](https://user-images.githubusercontent.com/74304320/185450672-00143416-34fe-4f64-b956-da60a943431f.png)
+
 ---
 
 ### Running without docker
