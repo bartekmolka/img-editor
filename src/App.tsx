@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import styles from './styles/app.module.scss'
 
 import Main from './components/Main'

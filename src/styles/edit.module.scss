@@ -2,9 +2,10 @@
 
 .edit {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: start;
     flex-direction: column;
+    gap: $gap;
 
     &>div {
         display: flex;
@@ -12,10 +13,57 @@
         align-items: start;
         flex-direction: column;
         flex-wrap: wrap;
+        gap: calc($gap/2);
+        width: 100%;
     }
     
     button {
         @include button;
+        padding: calc($gap/2)
+    }
+
+    input {
+        width: 100%;
+    }
+
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &+div {
+    width: 100%;
+
     }
 }
 
+.filters {
+    & > div  {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: calc($gap/2);
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    & > button {
+        padding: calc($gap/2)
+    }
+}
+
+input[type="file"] {
+    display: none;
+}

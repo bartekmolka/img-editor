@@ -1,10 +1,10 @@
 @import '_variables';
 
 .main {
-    width: 60vw;
-    max-height: 80vh;
-    min-height:40vh;
-    height: auto; 
+    width: auto;
+    min-height: 40vh;
+    min-width: 50vw;
+    height: auto;
     border-radius: $radius;
     box-shadow: rgb(175, 175, 175) 0px 3px 7px;
     background-color: $background;
@@ -17,17 +17,46 @@
 
 .buttons {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     flex-direction: row;
+    gap: $gap;
+    flex-wrap: wrap;
 
-    &>button {
+    & button, label {
         @include button;
         text-transform: uppercase;
+        padding: calc($gap/2); 
+        transition: all 1 ease-in-out;
+        font-size: $button;
+
+        &:active {
+            background-color: lightgray;
+        }
+    }
+
+    & button {
+        flex: 1;
+    }
+
+    & label {
+        flex: 1;
+        justify-self: end;
+        text-align: center;
+    }
+
+    &>div {
+        gap: $gap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
 }
 
+header {
+    display: flex;
+    justify-content: center;
+}
 
 aside {
     display: flex;
@@ -36,11 +65,45 @@ aside {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: $gap;
+    width: auto;
+
+    &>div>div {
+        width: 100%;
+    }
+}
+
+.image {
+    max-height: 40vh ;
+    width: 40vh;
+    // max-width: calc(60vw - 20px);
 }
 
 img {
-    width: 300px;
-    max-width: calc(60vw - 20px);
+    width: 100%;
+    object-fit: cover;
+    // max-width: calc(60vw - 20px);
     height: 100%;
     border-radius: $radius;
+}
+
+@media screen and (max-width: 456px) {
+    .image {
+        min-height: 40vh ;
+        width: 40vh;
+        // max-width: calc(60vw - 20px);
+    }
+    
+}
+
+@media screen and (max-width: 1024) {
+    aside {
+        align-items: center;
+    }
+    
+}
+
+
+.placeholder {
+    height: 100%;
+    border: 1px solid black; 
 }
